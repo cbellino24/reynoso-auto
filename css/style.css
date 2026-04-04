@@ -3910,7 +3910,8 @@ button{
 }
 
 .services-hero{
-  background:linear-gradient(180deg,#ffffff 0%, #f7f7fb 18%, #173ea6 18%, #173ea6 100%);
+  position:relative;
+  background:#173ea6;
   padding:0 0 78px;
   overflow:hidden;
 }
@@ -3931,6 +3932,7 @@ button{
 
 .services-hero-inner{
   position:relative;
+  z-index:3;
   margin-top:-120px;
 }
 
@@ -4098,11 +4100,28 @@ button{
 /* CTA strip */
 
 .services-strip-cta{
+  position:relative;
   background:#f0eeea;
   padding:48px 0;
+  overflow:hidden;
+}
+
+.services-strip-cta::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-1px;
+  height:86px;
+  background:#173ea6;
+  border-bottom-left-radius:52% 100%;
+  border-bottom-right-radius:48% 100%;
+  z-index:1;
 }
 
 .services-strip-cta-wrap{
+  position:relative;
+  z-index:3;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -4149,11 +4168,28 @@ button{
 /* all services */
 
 .services-all{
+  position:relative;
   background:#f7f7fb;
   padding:72px 0 82px;
+  overflow:hidden;
+}
+
+.services-all::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-1px;
+  height:86px;
+  background:#f0eeea;
+  border-bottom-left-radius:52% 100%;
+  border-bottom-right-radius:48% 100%;
+  z-index:1;
 }
 
 .services-all-heading{
+  position:relative;
+  z-index:3;
   max-width:900px;
   margin:0 auto 34px;
   text-align:center;
@@ -4175,6 +4211,8 @@ button{
 }
 
 .services-all-grid{
+  position:relative;
+  z-index:3;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:20px;
@@ -4225,11 +4263,28 @@ button{
 /* body content */
 
 .services-content{
+  position:relative;
   background:#fff;
   padding:72px 0 82px;
+  overflow:hidden;
+}
+
+.services-content::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-1px;
+  height:86px;
+  background:#f7f7fb;
+  border-bottom-left-radius:52% 100%;
+  border-bottom-right-radius:48% 100%;
+  z-index:1;
 }
 
 .services-content-grid{
+  position:relative;
+  z-index:3;
   display:grid;
   grid-template-columns:1.06fr .94fr;
   gap:44px;
@@ -4295,6 +4350,7 @@ button{
 
 /* faq page spacing */
 .services-faq{
+  position:relative;
   padding-top:72px;
 }
 
@@ -4319,7 +4375,6 @@ button{
 
 @media (max-width:980px){
   .services-hero{
-    background:linear-gradient(180deg,#ffffff 0%, #f7f7fb 14%, #173ea6 14%, #173ea6 100%);
     padding:0 0 60px;
   }
 
@@ -4353,6 +4408,12 @@ button{
     font-size:42px;
   }
 
+  .services-strip-cta::before,
+  .services-all::before,
+  .services-content::before{
+    height:68px;
+  }
+
   .services-strip-cta-wrap{
     flex-direction:column;
     align-items:flex-start;
@@ -4370,7 +4431,6 @@ button{
 
 @media (max-width:720px){
   .services-hero{
-    background:linear-gradient(180deg,#ffffff 0%, #f7f7fb 10%, #173ea6 10%, #173ea6 100%);
     padding:0 0 42px;
   }
 
@@ -4431,6 +4491,12 @@ button{
     padding:34px 0;
   }
 
+  .services-strip-cta::before,
+  .services-all::before,
+  .services-content::before{
+    height:54px;
+  }
+
   .services-strip-cta-wrap{
     padding:22px 20px;
   }
@@ -4471,7 +4537,14 @@ button{
   .popular-service-card h3{
     font-size:25px;
   }
+
+  .services-strip-cta::before,
+  .services-all::before,
+  .services-content::before{
+    height:46px;
+  }
 }
+
 /* =========================
    ABOUT PAGE (MATCH GALLERY STYLE)
    ========================= */
