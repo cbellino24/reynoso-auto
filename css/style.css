@@ -343,12 +343,15 @@ button{
 
 .hero-split{
   background:#fff;
-  padding:0 0 34px;
+  padding:0;
+  overflow:hidden;
 }
 
 .hero-shell{
   width:100vw;
+  max-width:100vw;
   margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
   position:relative;
 }
 
@@ -567,11 +570,11 @@ button{
 
 .trust-strip{
   background:#f7f7fb;
-  padding:14px 0 24px;
+  padding:36px 0 24px;
 }
 
 .trust-strip-alt{
-  padding-top:24px;
+  padding-top:36px;
 }
 
 .trust-grid{
@@ -1410,7 +1413,6 @@ button{
   transform:rotate(90deg);
 }
 
-/* FIXED FAQ COLLAPSE */
 .faq-answer-clean{
   max-height:0;
   overflow:hidden;
@@ -1780,10 +1782,19 @@ button{
     width:min(calc(100% - 44px), var(--container));
   }
 
-  /* keep hero full bleed on mobile */
-  .hero-shell{
+  .hero-split{
     width:100vw;
     margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    padding:0;
+    overflow:hidden;
+  }
+
+  .hero-shell{
+    width:100vw;
+    max-width:100vw;
+    margin-left:0;
+    margin-right:0;
   }
 
   .hero-main{
@@ -1797,6 +1808,7 @@ button{
   }
 
   .hero-panel-copy{
+    width:100%;
     padding:52px 34px 42px;
   }
 
@@ -1813,6 +1825,7 @@ button{
   }
 
   .hero-panel-media{
+    width:100%;
     min-height:420px;
   }
 
@@ -1823,12 +1836,17 @@ button{
 
   .hero-info-card{
     width:100%;
-    margin:-30px 0 0;
+    margin:0;
     grid-template-columns:1fr;
+    box-shadow:none;
   }
 
   .hero-info-hours::before{
     display:none;
+  }
+
+  .trust-strip{
+    padding-top:34px;
   }
 
   .trust-grid{
@@ -2030,10 +2048,6 @@ button{
     padding:14px 0 20px;
   }
 
-  .hero-split{
-    padding:0 0 20px;
-  }
-
   .hero-panel-copy{
     padding:38px 20px 28px;
   }
@@ -2056,10 +2070,6 @@ button{
   .hero-panel-media,
   .hero-media-slides{
     min-height:300px;
-  }
-
-  .hero-info-card{
-    margin:-18px 0 0;
   }
 
   .hero-info-brand-top{
@@ -2285,10 +2295,6 @@ button{
   .hero-panel-media,
   .hero-media-slides{
     min-height:240px;
-  }
-
-  .hero-info-card{
-    margin:-10px 0 0;
   }
 
   .hero-info-brand-top,
