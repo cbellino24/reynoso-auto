@@ -15,7 +15,7 @@
     rel="stylesheet"
   />
   <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
 
   <link rel="canonical" href="https://example.com/index.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
@@ -208,7 +208,7 @@
   <main>
 
     <section class="hero-split">
-      <div class="container hero-shell">
+      <div class="hero-shell">
 
         <div class="hero-main">
           <div class="hero-panel hero-panel-copy">
@@ -240,32 +240,34 @@
           </div>
         </div>
 
-        <div class="hero-info-card">
-          <div class="hero-info-col hero-info-brand">
-            <div class="hero-info-brand-top">
-              <span>Trusted local service</span>
+        <div class="container">
+          <div class="hero-info-card">
+            <div class="hero-info-col hero-info-brand">
+              <div class="hero-info-brand-top">
+                <span>Trusted local service</span>
+              </div>
+              <div class="hero-info-brand-body">
+                <h3>Reynoso Auto Repair Omaha</h3>
+              </div>
             </div>
-            <div class="hero-info-brand-body">
-              <h3>Reynoso Auto Repair Omaha</h3>
+
+            <div class="hero-info-col hero-info-main">
+              <p>3 locations serving Omaha</p>
+              <strong>Contact Us</strong>
+              <a class="hero-mini-btn" href="#contact-form">Email Us</a>
             </div>
-          </div>
 
-          <div class="hero-info-col hero-info-main">
-            <p>3 locations serving Omaha</p>
-            <strong>Contact Us</strong>
-            <a class="hero-mini-btn" href="#contact-form">Email Us</a>
-          </div>
+            <div class="hero-info-col hero-info-hours">
+              <h4>Business Hours</h4>
+              <p><strong class="underline">Mon - Sat:</strong> 8:00 AM - 6:00 PM</p>
+              <p><strong>Same-day service available</strong></p>
+              <p>Se habla español</p>
 
-          <div class="hero-info-col hero-info-hours">
-            <h4>Business Hours</h4>
-            <p><strong class="underline">Mon - Sat:</strong> 8:00 AM - 6:00 PM</p>
-            <p><strong>Same-day service available</strong></p>
-            <p>Se habla español</p>
-
-            <a class="hero-rating-link" href="locations.html" aria-label="View locations">
-              <span class="hero-rating-score">3</span>
-              <span class="hero-stars">Locations</span>
-            </a>
+              <a class="hero-rating-link" href="locations.html" aria-label="View locations">
+                <span class="hero-rating-score">3</span>
+                <span class="hero-stars">Locations</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -280,7 +282,7 @@
           </div>
           <div class="trust-content">
             <strong>3 Locations in Omaha</strong>
-            <span>South Omaha (2) · North Omaha (Llantes)</span>
+            <span>South Omaha (2) · North Omaha (Llantera)</span>
           </div>
         </div>
 
@@ -404,8 +406,7 @@
         </article>
       </div>
     </section>
-
-    <section class="why-us section">
+        <section class="why-us section">
       <div class="why-wave-top" aria-hidden="true">
         <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
           <path d="M0,80 C200,20 380,0 720,40 C1080,80 1260,100 1440,60 L1440,0 L0,0 Z"></path>
